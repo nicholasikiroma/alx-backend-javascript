@@ -1,3 +1,3 @@
-import { taskFirst, taskNext } from './0-constants.js';
+import createEmployeesObject from './11-createEmployeesObject.js';
 
-console.log(`${taskFirst()} ${taskNext()}`);
+console.log(createEmployeesObject("Software", [ "Bob", "Sylvie" ]));
