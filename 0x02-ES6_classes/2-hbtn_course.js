@@ -1,50 +1,46 @@
 export default class HolbertonCourse {
-    constructor(name, length, students) {
-        this.name = name;
-        this.length = length;
-        this.students = students;
-    }
+  constructor(name, length, students) {
+    this.name = name;
+    this.length = length;
+    this.students = students;
+  }
 
-    get name() {
-        return this._name;
-    }
+  get name() {
+    return this._name;
+  }
 
-    get length() {
-        return this._length;
-    }
+  get length() {
+    return this._length;
+  }
 
-    get students() {
-        return this._students;
-    }
+  get students() {
+    return this._students;
+  }
 
-    set name(newName) {
-        const name = newName;
-        if(typeof name === 'string') {
-            this._name = name;
-        }
-        else {
-            console.log('Attribute name must be string');
-        }
+  set name(newName) {
+    if (typeof newName === 'string') {
+      this._name = newName;
+    } else {
+      throw new TypeError('Name must be a string');
     }
+  }
 
-    set length(newLength) {
-        const length = newLength;
-        if(typeof length === 'number') {
-            this._length = length;
-        }
-        else {
-            console.log('Attribute must be an integer');
-        }
-
+  set length(newLength) {
+    if (typeof newLength === 'number') {
+      this._length = newLength;
+    } else {
+      throw new TypeError('Length must be a number');
     }
+  }
 
-    set students(newStudent) {
-        const students = newStudent;
-        if(Array.isArray(students)) {
-            this._students =students;
-        }
-        else {
-            console.log('Attribute name must be an array');
-        }
+  set students(newStudents) {
+    if (
+      Array.isArray(newStudents) &&
+      newStudents.every((student) => typeof student === 'string')
+    ) {
+      this._students = newStudents;
+    } else {
+      throw new TypeError('Students must be an array of strings');
     }
+  }
 }
