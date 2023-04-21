@@ -23,11 +23,11 @@ export default class Pricing {
     }
   }
 
-  get amount(){
+  get amount() {
     return this._amount;
   }
 
-  get currency(){
+  get currency() {
     return this._currency;
   }
 
