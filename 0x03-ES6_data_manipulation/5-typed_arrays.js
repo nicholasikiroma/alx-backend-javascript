@@ -7,7 +7,7 @@ export default function createInt8TypedArray(length, position, value) {
     int8view[position] = value;
   } catch (error) {
     if (error instanceof RangeError) {
-      throw Error('Position outside range');
+      throw new Error('Position outside range');
     }
   }
   return view;

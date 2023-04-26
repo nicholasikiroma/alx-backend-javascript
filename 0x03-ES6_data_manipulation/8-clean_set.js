@@ -3,8 +3,8 @@ export default function cleanSet(set, startString) {
   if (startString.length === 0) return '';
   for (const element of set) {
     if (element.startsWith(startString) && typeof element === 'string') {
-      stringList.push(element.substring(startString.length));
+      stringList.push(element.slice(startString.length));
     }
   }
-  return stringList.join("-");
+  return stringList.join('-');
 }
