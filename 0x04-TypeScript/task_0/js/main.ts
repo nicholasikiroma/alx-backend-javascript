@@ -35,8 +35,8 @@ studentsList.forEach((student: Student): void => {
   nameCell.textContent = student.firstName;
   locationCell.textContent = student.location;
 
-  nameCell.style.border = "1px solid pink";
-  locationCell.style.border = "1px solid pink";
+  nameCell.style.border = "1px solid blue";
+  locationCell.style.border = "1px solid blue";
   nameCell.style.padding = "5px";
   locationCell.style.padding = "5px";
 
